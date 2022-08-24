@@ -1,13 +1,12 @@
 # This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
 # For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
 
-name: Build 01
+name: Build
 on:
   push:
     branches:
-      - main # or the name of your main branch
-  pull_request:
-    types: [opened, synchronize, reopened]
+      - master # or the name of your main branch
+
 jobs:
   build:
     name: Build
@@ -34,7 +33,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build and analyze
         env:
-          REPOGITHUB_TOKEN: ${{ secrets.REPOGITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONARQUBE_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
-          SONARQUBE_HOST: ${{ secrets.SONARQUBE_HOST }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=xxx
