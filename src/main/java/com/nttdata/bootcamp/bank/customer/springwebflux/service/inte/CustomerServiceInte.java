@@ -10,9 +10,9 @@
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
  */
-package com.nttdata.bootcamp.bank.customer.service.inte;
+package com.nttdata.bootcamp.bank.customer.springwebflux.service.inte;
 
-import com.nttdata.bootcamp.bank.customer.model.document.Customer;
+import com.nttdata.bootcamp.bank.customer.springdata.document.Customer;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 /**

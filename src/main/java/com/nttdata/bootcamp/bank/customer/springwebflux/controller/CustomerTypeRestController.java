@@ -11,13 +11,13 @@
  * ---------------------------------------------------------------------------------------------------------------------------
  * Bootcamp-30              19/08/2022        Mario Vásquez           Realizar la creación de un método nuevo.
  */
-package com.nttdata.bootcamp.bank.customer.controller;
+package com.nttdata.bootcamp.bank.customer.springwebflux.controller;
 
-import com.nttdata.bootcamp.bank.customer.model.document.CustomerType;
-import com.nttdata.bootcamp.bank.customer.model.document.Customer;
-import com.nttdata.bootcamp.bank.customer.model.document.CustomerType;
-import com.nttdata.bootcamp.bank.customer.service.inte.CustomerServiceInte;
-import com.nttdata.bootcamp.bank.customer.service.inte.CustomerTypeServiceInte;
+import com.nttdata.bootcamp.bank.customer.springdata.document.CustomerType;
+import com.nttdata.bootcamp.bank.customer.springdata.document.Customer;
+import com.nttdata.bootcamp.bank.customer.springdata.document.CustomerType;
+import com.nttdata.bootcamp.bank.customer.springwebflux.service.inte.CustomerServiceInte;
+import com.nttdata.bootcamp.bank.customer.springwebflux.service.inte.CustomerTypeServiceInte;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ import reactor.core.publisher.Mono;
  * Clase de controladora para invocar los métodos con rest api.
  */
 @RestController
-@RequestMapping("/api/customerType")
+@RequestMapping("/api/business-microservice01-customer/customerType")
 public class CustomerTypeRestController
 {
 
@@ -37,7 +37,7 @@ public class CustomerTypeRestController
     @Autowired
     private CustomerTypeServiceInte customerTypeServiceInte;
 
-    @PostMapping("create")
+    @PostMapping()
     public Mono<CustomerType> create(@RequestBody final CustomerType customerType) {
         log.debug("Begin RestController create CustomerType");
         return customerTypeServiceInte.create(customerType);
@@ -55,13 +55,13 @@ public class CustomerTypeRestController
         return customerTypeServiceInte.readByCodeCustomerType(codeCustomerType);
     }
 
-    @PutMapping("updateById/{id}")
+    @PutMapping("/{id}")
     public Mono<CustomerType> updateById(@RequestBody final CustomerType customerType, @PathVariable("id") final String id) {
         log.debug("Begin RestController updateById CustomerType");
         return customerTypeServiceInte.updateById(id, customerType);
     }
 
-    @DeleteMapping("deleteById/{id}")
+    @DeleteMapping("/{id}")
     public Mono<Void> deleteById(@PathVariable final String id) {
         log.debug("Begin RestController deleteById CustomerType");
         return customerTypeServiceInte.deleteById(id);

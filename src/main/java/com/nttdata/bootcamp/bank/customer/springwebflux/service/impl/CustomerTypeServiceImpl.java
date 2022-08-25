@@ -10,11 +10,11 @@
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
  */
-package com.nttdata.bootcamp.bank.customer.service.impl;
+package com.nttdata.bootcamp.bank.customer.springwebflux.service.impl;
 
-import com.nttdata.bootcamp.bank.customer.model.dao.inte.CustomerTypeDaoInte;
-import com.nttdata.bootcamp.bank.customer.model.document.CustomerType;
-import com.nttdata.bootcamp.bank.customer.service.inte.CustomerTypeServiceInte;
+import com.nttdata.bootcamp.bank.customer.springwebflux.dao.inte.CustomerTypeDaoInte;
+import com.nttdata.bootcamp.bank.customer.springdata.document.CustomerType;
+import com.nttdata.bootcamp.bank.customer.springwebflux.service.inte.CustomerTypeServiceInte;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

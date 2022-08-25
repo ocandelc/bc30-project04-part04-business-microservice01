@@ -9,10 +9,11 @@
  * Modificaciones
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-30              24/08/2022       Oscar Candela          Realizar la creación de un método nuevo.
  */
-package com.nttdata.bootcamp.bank.customer.service.inte;
+package com.nttdata.bootcamp.bank.customer.springwebflux.service.inte;
 
-import com.nttdata.bootcamp.bank.customer.model.document.DocumentType;
+import com.nttdata.bootcamp.bank.customer.springdata.document.DocumentType;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 /**

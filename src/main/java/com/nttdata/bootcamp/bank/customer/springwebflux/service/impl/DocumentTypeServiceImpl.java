@@ -9,13 +9,15 @@
  * Modificaciones
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-30              24/08/2022       Oscar Candela          Realizar la creación de un método nuevo.
  */
-package com.nttdata.bootcamp.bank.customer.service.impl;
+package com.nttdata.bootcamp.bank.customer.springwebflux.service.impl;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.nttdata.bootcamp.bank.customer.model.dao.inte.DocumentTypeDaoInte;
-import com.nttdata.bootcamp.bank.customer.model.document.DocumentType;
-import com.nttdata.bootcamp.bank.customer.service.inte.DocumentTypeServiceInte;
+import com.nttdata.bootcamp.bank.customer.springwebflux.dao.inte.DocumentTypeDaoInte;
+import com.nttdata.bootcamp.bank.customer.springdata.document.DocumentType;
+import com.nttdata.bootcamp.bank.customer.springwebflux.service.inte.DocumentTypeServiceInte;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;

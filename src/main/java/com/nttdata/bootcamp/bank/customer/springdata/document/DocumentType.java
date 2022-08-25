@@ -9,8 +9,8 @@
  * Modificaciones
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
- */
-package com.nttdata.bootcamp.bank.customer.model.document;
+ * Bootcamp-30              24/08/2022        Oscar Candela           Realizar la creación de un método nuevo.*/
+package com.nttdata.bootcamp.bank.customer.springdata.document;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

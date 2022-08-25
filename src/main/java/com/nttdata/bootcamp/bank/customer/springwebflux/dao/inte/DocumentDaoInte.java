@@ -9,12 +9,13 @@
  * Modificaciones
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-30              24/08/2022       Oscar Candela          Realizar la creación de un método nuevo.
  */
-package com.nttdata.bootcamp.bank.customer.model.dao.inte;
+package com.nttdata.bootcamp.bank.customer.springwebflux.dao.inte;
 
-import com.nttdata.bootcamp.bank.customer.model.document.Customer;
-import com.nttdata.bootcamp.bank.customer.model.document.CustomerType;
-import com.nttdata.bootcamp.bank.customer.model.document.Document;
+import com.nttdata.bootcamp.bank.customer.springdata.document.Customer;
+import com.nttdata.bootcamp.bank.customer.springdata.document.CustomerType;
+import com.nttdata.bootcamp.bank.customer.springdata.document.Document;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Mono;
 

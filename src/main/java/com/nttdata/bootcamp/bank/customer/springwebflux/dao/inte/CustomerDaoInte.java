@@ -9,10 +9,11 @@
  * Modificaciones
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-30              24/08/2022       Mario Vásquez          Modificacioón de un método.
  */
-package com.nttdata.bootcamp.bank.customer.model.dao.inte;
+package com.nttdata.bootcamp.bank.customer.springwebflux.dao.inte;
 
-import com.nttdata.bootcamp.bank.customer.model.document.Customer;
+import com.nttdata.bootcamp.bank.customer.springdata.document.Customer;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Mono;
 

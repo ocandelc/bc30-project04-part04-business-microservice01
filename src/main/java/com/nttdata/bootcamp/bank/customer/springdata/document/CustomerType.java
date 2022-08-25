@@ -11,7 +11,7 @@
  * ---------------------------------------------------------------------------------------------------------------------------
  * Bootcamp-30              17/08/2022        Mario Vásquez           Realizar la creación de un campo nuevo.
  */
-package com.nttdata.bootcamp.bank.customer.model.document;
+package com.nttdata.bootcamp.bank.customer.springdata.document;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

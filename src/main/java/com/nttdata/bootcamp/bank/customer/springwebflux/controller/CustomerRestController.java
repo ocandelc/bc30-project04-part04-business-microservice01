@@ -11,10 +11,10 @@
  * ---------------------------------------------------------------------------------------------------------------------------
  * Bootcamp-30              19/08/2022        Mario Vásquez           Realizar la creación de un método nuevo.
  */
-package com.nttdata.bootcamp.bank.customer.controller;
+package com.nttdata.bootcamp.bank.customer.springwebflux.controller;
 
-import com.nttdata.bootcamp.bank.customer.model.document.Customer;
-import com.nttdata.bootcamp.bank.customer.service.inte.CustomerServiceInte;
+import com.nttdata.bootcamp.bank.customer.springdata.document.Customer;
+import com.nttdata.bootcamp.bank.customer.springwebflux.service.inte.CustomerServiceInte;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ import reactor.core.publisher.Mono;
  * Clase de controladora para invocar los métodos con rest api.
  */
 @RestController
-@RequestMapping("/api/customer")
+@RequestMapping("/api/business-microservice01-customer/customer")
 public class CustomerRestController
 {
 
@@ -34,7 +34,7 @@ public class CustomerRestController
     @Autowired
     private CustomerServiceInte customerServiceInte;
 
-    @PostMapping("create")
+    @PostMapping()
     public Mono<Customer> create(@RequestBody final Customer customer) {
         log.debug("Begin RestController create Customer");
         return customerServiceInte.create(customer);
@@ -52,13 +52,13 @@ public class CustomerRestController
         return customerServiceInte.readByCodeCustomer(codeCustomer);
     }
 
-    @PutMapping("updateById/{id}")
+    @PutMapping("/{id}")
     public Mono<Customer> updateById(@RequestBody final Customer customer, @PathVariable("id") final String id) {
         log.debug("Begin RestController updateById Customer");
         return customerServiceInte.updateById(id, customer);
     }
 
-    @DeleteMapping("deleteById/{id}")
+    @DeleteMapping("/{id}")
     public Mono<Void> deleteById(@PathVariable final String id) {
         log.debug("Begin RestController deleteById Customer");
         return customerServiceInte.deleteById(id);

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../bc30-project04-part04-business-microservice02/pom.xml" />
+        <option value="$PROJECT_DIR$/../bc30-project04-part04-business-microservice03/pom.xml" />
+        <option value="$PROJECT_DIR$/../bc30-project04-part04-business-microservice04/pom.xml" />
+        <option value="$PROJECT_DIR$/../bc30-project04-part05-config-microservice01/pom.xml" />
+        <option value="$PROJECT_DIR$/../bc30-project04-part05-config-microservice02/pom.xml" />
+        <option value="$PROJECT_DIR$/../bc30-project04-part05-config-microservice03/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_12" default="true" project-jdk-name="12" project-jdk-type="JavaSDK" />
+</project>

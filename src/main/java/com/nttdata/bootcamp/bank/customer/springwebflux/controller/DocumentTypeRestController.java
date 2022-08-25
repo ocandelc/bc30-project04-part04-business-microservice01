@@ -9,11 +9,12 @@
  * Modificaciones
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
+ * Bootcamp-30              24/08/2022       Oscar Candela          Realizar la creación de un método nuevo.
  */
-package com.nttdata.bootcamp.bank.customer.controller;
+package com.nttdata.bootcamp.bank.customer.springwebflux.controller;
 
-import com.nttdata.bootcamp.bank.customer.model.document.DocumentType;
-import com.nttdata.bootcamp.bank.customer.service.inte.DocumentTypeServiceInte;
+import com.nttdata.bootcamp.bank.customer.springdata.document.DocumentType;
+import com.nttdata.bootcamp.bank.customer.springwebflux.service.inte.DocumentTypeServiceInte;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
@@ -24,14 +25,14 @@ import reactor.core.publisher.Mono;
  * Clase de controladora para invocar los métodos con rest api.
  */
 @RestController
-@RequestMapping("/api/documentType")
+@RequestMapping("/api/business-microservice01-customer/documentType")
 public class DocumentTypeRestController {
     private static final Logger log = LoggerFactory.getLogger(DocumentTypeRestController.class);
 
     @Autowired
     private DocumentTypeServiceInte documentTypeServiceInte;
 
-    @PostMapping("create")
+    @PostMapping()
     public Mono<DocumentType> create(@RequestBody final DocumentType documentType) {
         log.debug("Begin RestController create DocumentType");
         return documentTypeServiceInte.create(documentType);
@@ -49,13 +50,13 @@ public class DocumentTypeRestController {
         return documentTypeServiceInte.readByCodeDocumentType(codeDocumentType);
     }
 
-    @PutMapping("updateById/{id}")
+    @PutMapping("/{id}")
     public Mono<DocumentType> updateById(@RequestBody final DocumentType documentType, @PathVariable("id") final String id) {
         log.debug("Begin RestController updateById DocumentType");
         return documentTypeServiceInte.updateById(id, documentType);
     }
 
-    @DeleteMapping("deleteById/{id}")
+    @DeleteMapping("/{id}")
     public Mono<Void> deleteById(@PathVariable final String id) {
         log.debug("Begin RestController deleteById DocumentType");
         return documentTypeServiceInte.deleteById(id);

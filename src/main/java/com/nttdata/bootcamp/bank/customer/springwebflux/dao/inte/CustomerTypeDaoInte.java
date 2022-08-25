@@ -10,11 +10,11 @@
  * Motivo                   Fecha             Nombre                  Descripción
  * ---------------------------------------------------------------------------------------------------------------------------
  */
-package com.nttdata.bootcamp.bank.customer.model.dao.inte;
+package com.nttdata.bootcamp.bank.customer.springwebflux.dao.inte;
 
 
-import com.nttdata.bootcamp.bank.customer.model.document.Customer;
-import com.nttdata.bootcamp.bank.customer.model.document.CustomerType;
+import com.nttdata.bootcamp.bank.customer.springdata.document.Customer;
+import com.nttdata.bootcamp.bank.customer.springdata.document.CustomerType;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import reactor.core.publisher.Mono;
 
