@@ -19,6 +19,8 @@
 		<spring-cloud.version>2021.0.3</spring-cloud.version>
 		<sonar.organization>ocandelc</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<junit.jupiter.version>5.8.1</junit.jupiter.version>
+		<junit.platform.version>1.8.1</junit.platform.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -88,6 +90,25 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.7.201606060606</version>
+				<configuration>
+					<dataFile>${basedir}/target/jacoco-unit.exec</dataFile>
+				</configuration>
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+						<configuration>
+							<propertyName>jacoco.argLine</propertyName>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
